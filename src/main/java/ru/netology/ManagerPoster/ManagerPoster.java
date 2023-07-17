@@ -1,6 +1,6 @@
-package ru.netology.ManagerAfisha;
+package ru.netology.ManagerPoster;
 
-public class ManagerAfisha {
+public class ManagerPoster {
     private String[] films = new String[0];
     private int limit;
 
@@ -14,12 +14,12 @@ public class ManagerAfisha {
         return limit;
     }
 
-    public ManagerAfisha() {
+    public ManagerPoster() {
 
         this.limit = 10;
     }
 
-    public ManagerAfisha(int limit) {
+    public ManagerPoster(int limit) {
 
         this.limit = limit;
     }

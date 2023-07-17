@@ -1,19 +1,19 @@
-package ru.netology.ManagerAfisha;
+package ru.netology.ManagerPoster;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ManagerAfishaTest {
+public class ManagerPosterTest {
 
 
     @Test
     public void testOneFilms() {
-        ManagerAfisha afisha = new ManagerAfisha();
+        ManagerPoster poster = new ManagerPoster();
 
-        afisha.addFilm("Никогда не сдавайся");
+        poster.addFilm("Никогда не сдавайся");
 
         String[] expected = {"Никогда не сдавайся"};
-        String[] actual = afisha.findAll();
+        String[] actual = poster.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -21,10 +21,10 @@ public class ManagerAfishaTest {
 
     @Test
     public void testZeroFilms() {
-        ManagerAfisha afisha = new ManagerAfisha();
+        ManagerPoster poster = new ManagerPoster();
 
         String[] expected = {};
-        String[] actual = afisha.findAll();
+        String[] actual = poster.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -32,100 +32,100 @@ public class ManagerAfishaTest {
 
     @Test
     public void testAllTwelveFilms() {
-        ManagerAfisha afisha = new ManagerAfisha();
+        ManagerPoster poster = new ManagerPoster();
 
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        afisha.addFilm("Отель Белград");
-        afisha.addFilm("Джентельмены");
-        afisha.addFilm("Человек не ведимка");
-        afisha.addFilm("Троли. Мировой тур");
-        afisha.addFilm("Номер один");
-        afisha.addFilm("1 + 1");
-        afisha.addFilm("Пацанские истории");
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
+        poster.addFilm("Джентельмены");
+        poster.addFilm("Человек не ведимка");
+        poster.addFilm("Троли. Мировой тур");
+        poster.addFilm("Номер один");
+        poster.addFilm("1 + 1");
+        poster.addFilm("Пацанские истории");
 
         String[] expected = {"Никогда не сдавайся", "Большой куш", "Угнать за 60 секунд", "Бладшот", "Вперёд", "Отель Белград", "Джентельмены", "Человек не ведимка", "Троли. Мировой тур", "Номер один", "1 + 1", "Пацанские истории"};
-        String[] actual = afisha.findAll();
+        String[] actual = poster.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void testAllFilmsLimitSeven() {
-        ManagerAfisha afisha = new ManagerAfisha(7);
+        ManagerPoster poster = new ManagerPoster(7);
 
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        afisha.addFilm("Отель Белград");
-        afisha.addFilm("Джентельмены");
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
+        poster.addFilm("Джентельмены");
 
         String[] expected = {"Никогда не сдавайся", "Большой куш", "Угнать за 60 секунд", "Бладшот", "Вперёд", "Отель Белград", "Джентельмены"};
-        String[] actual = afisha.findAll();
+        String[] actual = poster.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void testAllFilmsLimitLessSix() {
-        ManagerAfisha afisha = new ManagerAfisha(7);
+        ManagerPoster poster = new ManagerPoster(7);
 
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        afisha.addFilm("Отель Белград");
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
 
         String[] expected = {"Никогда не сдавайся", "Большой куш", "Угнать за 60 секунд", "Бладшот", "Вперёд", "Отель Белград"};
-        String[] actual = afisha.findAll();
+        String[] actual = poster.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void testAllFilmsLimitMoreSeven() {
-        ManagerAfisha afisha = new ManagerAfisha(7);
+        ManagerPoster poster = new ManagerPoster(7);
 
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        afisha.addFilm("Отель Белград");
-        afisha.addFilm("Джентельмены");
-        afisha.addFilm("Человек не ведимка");
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
+        poster.addFilm("Джентельмены");
+        poster.addFilm("Человек не ведимка");
 
         String[] expected = {"Никогда не сдавайся", "Большой куш", "Угнать за 60 секунд", "Бладшот", "Вперёд", "Отель Белград", "Джентельмены", "Человек не ведимка"};
-        String[] actual = afisha.findAll();
+        String[] actual = poster.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void testMoviesLast() {
-        ManagerAfisha afisha = new ManagerAfisha(11);
+        ManagerPoster poster = new ManagerPoster(11);
 
-        afisha.findlast();
+        poster.findlast();
 
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        afisha.addFilm("Отель Белград");
-        afisha.addFilm("Джентельмены");
-        afisha.addFilm("Человек не ведимка");
-        afisha.addFilm("Троли. Мировой тур");
-        afisha.addFilm("Номер один");
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
+        poster.addFilm("Джентельмены");
+        poster.addFilm("Человек не ведимка");
+        poster.addFilm("Троли. Мировой тур");
+        poster.addFilm("Номер один");
 
         String[] expected = {"Номер один", "Троли. Мировой тур", "Человек не ведимка", "Джентельмены", "Отель Белград", "Вперёд", "Бладшот", "Угнать за 60 секунд", "Большой куш", "Никогда не сдавайся"};
-        String[] actual = afisha.findlast();
+        String[] actual = poster.findlast();
         Assertions.assertArrayEquals(expected, actual);
     }
 
@@ -133,17 +133,17 @@ public class ManagerAfishaTest {
     public void testLastFilms() {
 
 
-        ManagerAfisha afisha = new ManagerAfisha();
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        afisha.addFilm("Отель Белград");
-        afisha.addFilm("Джентельмены");
+        ManagerPoster poster = new ManagerPoster();
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
+        poster.addFilm("Джентельмены");
 
         String[] expected = {"Джентельмены", "Отель Белград", "Вперёд", "Бладшот", "Угнать за 60 секунд", "Большой куш", "Никогда не сдавайся"};
-        String[] actual = afisha.findlast();
+        String[] actual = poster.findlast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -151,46 +151,46 @@ public class ManagerAfishaTest {
 
     @Test
     public void testLimitOfFilmsIsTheSame() {
-        ManagerAfisha afisha = new ManagerAfisha(11);
+        ManagerPoster poster = new ManagerPoster(11);
 
-        afisha.findlast();
+        poster.findlast();
 
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        afisha.addFilm("Отель Белград");
-        afisha.addFilm("Джентельмены");
-        afisha.addFilm("Человек не ведимка");
-        afisha.addFilm("Троли. Мировой тур");
-        afisha.addFilm("Номер один");
-        afisha.addFilm("1 + 1");
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
+        poster.addFilm("Джентельмены");
+        poster.addFilm("Человек не ведимка");
+        poster.addFilm("Троли. Мировой тур");
+        poster.addFilm("Номер один");
+        poster.addFilm("1 + 1");
 
         String[] expected = {"1 + 1", "Номер один", "Троли. Мировой тур", "Человек не ведимка", "Джентельмены", "Отель Белград", "Вперёд", "Бладшот", "Угнать за 60 секунд", "Большой куш", "Никогда не сдавайся"};
-        String[] actual = afisha.findlast();
+        String[] actual = poster.findlast();
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
     public void testMoviesMoreThenLimit() {
-        ManagerAfisha afisha = new ManagerAfisha();
-        afisha.setLimitFilms(5);
-        afisha.getLimitFilms();
+        ManagerPoster poster = new ManagerPoster();
+        poster.setLimitFilms(5);
+        poster.getLimitFilms();
 
-        afisha.addFilm("Никогда не сдавайся");
-        afisha.addFilm("Большой куш");
-        afisha.addFilm("Угнать за 60 секунд");
-        afisha.addFilm("Бладшот");
-        afisha.addFilm("Вперёд");
-        manager.addFilm("Отель Белград");
-        manager.addFilm("Джентельмены");
-        manager.addFilm("Человек не ведимка");
-        manager.addFilm("Троли. Мировой тур");
-        manager.addFilm("Номер один");
+        poster.addFilm("Никогда не сдавайся");
+        poster.addFilm("Большой куш");
+        poster.addFilm("Угнать за 60 секунд");
+        poster.addFilm("Бладшот");
+        poster.addFilm("Вперёд");
+        poster.addFilm("Отель Белград");
+        poster.addFilm("Джентельмены");
+        poster.addFilm("Человек не ведимка");
+        poster.addFilm("Троли. Мировой тур");
+        poster.addFilm("Номер один");
 
         String[] expected = {"Номер один", "Троли. Мировой тур", "Человек не ведимка", "Джентельмены", "Отель Белград"};
-        String[] actual = manager.findlast();
+        String[] actual = poster.findlast();
         Assertions.assertArrayEquals(expected, actual);
     }
 
